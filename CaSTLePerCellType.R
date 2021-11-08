@@ -10,7 +10,7 @@ source_path <- "/home/rishab20213/caSTLe_data/xin/"
 target_path <- "/home/rishab20213/caSTLe_data/seger/"
 # 1. Load datasets in scater format: loaded files expected to contain "Large SingleCellExperiment" object
 source = readRDS(paste(source_path,"source.rds",sep=""))
-target = readRDS(paste(target_path+"target.rds",sep=""))
+target = readRDS(paste(target_path,"target.rds",sep=""))
 ds1 = t(exprs(source)) 
 ds2 = t(exprs(target)) 
 colnames(ds1) = elementMetadata(source)$feature_symbol
